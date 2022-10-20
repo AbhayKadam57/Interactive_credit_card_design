@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div id="bg-left">
+        <img src="./images/bg-main-desktop.png" alt="" />
+      </div>
+      <div id="bg-right"></div>
+    </div>
+    <section class="form-cards">
+      <div class="cards">
+        <div class="card front-cards">
+          <img src="./images/bg-card-front.png" alt="" />
+          <div class="logo">
+            <img src="images/card-logo.svg" />
+          </div>
+          <div id="card-number">
+            <p>0000 0000 0000 0000</p>
+          </div>
+          <div id="carholder-name">
+            <p id="displayName">Jane Appleseed</p>
+            <p><span id="displayMonth">00</span>/<span id="displayYear">00</span></p>
+          </div>
+        </div>
+        <div class="card back-card">
+          <img src="./images/bg-card-back.png" alt="" />
+          <div id="cvv-box">
+              <p id="displayCvv">000</p>
+          </div>
+        </div>
+      </div>
+      <div class="form type">
+        <form id="form" action="/" method="GET">
+          <div class="inputs">
+            <label for="name">Cardholder name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+          
+              placeholder="e.g. Jane Appleseed"
+            />
+          </div>
+          <small class="error error-name" id="error-name">Please enter valid name</small>
+          <div class="inputs">
+            <label for="number">Card Number</label>
+            <input
+              type="text"
+              id="number"
+              name="number"
+              maxlength="19"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+          </div>
+          <small class="error error-number">Wrong Format, Number only</small>
+          <div id="inputs" class="input-date">
+            <div id="exp-date">
+              <label>Exp. Date(MM/YY)</label>
+              <div class="date-box">
+                <input id="month" type="text" name="month" placeholder="MM"  maxlength="2" />
+                <input id="year" type="text" name="year" placeholder="YY"  maxlength="2"/>
+              </div>
+              <small class="error error-date">Can't be blank</small>
+              <small class="error error-date">Can't be blank</small>
+            </div>
+            
+            <div class="cvv">
+              <label for="cvv-number">CvC</label>
+              <input
+                type="text"
+                id="cvv-number"
+                name="cvv"
+                placeholder="e.g. 123"
+                
+                maxlength="3"
+              />
+              <small class="error error-cvv">Can't be blank</small>
+            </div>
+          </div>
+          
+          <button class="button" type="submit">Confirm</button>
+        </form>
+      </div>
+      <div class="form complete">
+        <div class="check">
+          <img src="images/icon-complete.svg" alt="">
+        </div>
+        <h1>THANK YOU</h1>
+        <p>We've added your card details</p>
+        <button class="button" id="continue">Continue</button>
+      </div>
+    </section>
+   
+  </body>
+
+ 
+  <script src="script.js" type="text/javascript"></script>
+ 
+</html>
