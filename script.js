@@ -79,12 +79,6 @@ form.addEventListener('submit',(e)=>{
         Name.style.border="2px solid hsl(270, 3%, 87%)"
     }
 
-    // console.log(Number.value)
-
-    // console.log(typeof(Number.value))
-
-    // console.log([...Number.value])
-
     const CardNumber = [...Number.value]    
 
     let Value =[]
@@ -104,8 +98,7 @@ form.addEventListener('submit',(e)=>{
         
       }
 
-      
-
+    
     })
 
     console.log(Value)
@@ -120,66 +113,58 @@ form.addEventListener('submit',(e)=>{
         NumberError.style.display="block"
         Number.style.border="2px solid hsl(0, 100%, 66%)"
     }else{
-
         NumberError.style.display="none"
         Number.style.border="2px solid hsl(270, 3%, 87%)"
-
     }
+    
     
     if(!month.value){
         
+        month.style.border="2px solid hsl(0, 100%, 66%)"
+        DateError.style.display="block"
         
-        if(!month.value){
-
-            month.style.border="2px solid hsl(0, 100%, 66%)"
-            DateError.style.display="block"
-        }else{
-
-            month.style.border="2px solid hsl(270, 3%, 87%)"
-            DateError.style.display="none"  
-        }
-
-       
-
-       
-        
-    }else{
-
+    }else {
         month.style.border="2px solid hsl(270, 3%, 87%)"
-        year.style.border="2px solid hsl(270, 3%, 87%)"
+        DateError.style.display="block"
+
+
     }
-
-
-
+    
+    
+    
     if(!year.value){
 
         DateError.style.display="block"
         year.style.border="2px solid hsl(0, 100%, 66%)"
     }else{
-        DateError.style.display="none"  
-        year.style.border="2px solid hsl(270, 3%, 87%)"
-       
-    }
 
+        year.style.border="2px solid hsl(270, 3%, 87%)"
+        DateError.style.display="none"
+    }
+    
+    
+    
     if(!cvv.value){
         
         CVVError.style.display="block"
         cvv.style.border="2px solid hsl(0, 100%, 66%)"
     }else{
 
-        DateError.style.display="none"
-        CVVError.style.display="none"
-        month.style.border="2px solid hsl(270, 3%, 87%)"
-        year.style.border="2px solid hsl(270, 3%, 87%)"
+        CVVError.style.display="none"      
         cvv.style.border="2px solid hsl(270, 3%, 87%)"
+    
+        
+    }
+
+    
+
+    if(index<0 && Number.value && month.value && year.value && cvv.value && Name.value){
+
 
         type.style.display="none"
 
         complete.style.display="flex"
-
     }
-
- 
 
 
     displayNumber.innerText = !Number.value ? "0000 0000 0000 0000" : Number.value
