@@ -4,7 +4,7 @@ const form = document.getElementById("form")
 
 const NameError = document.querySelector(".error-name")
 
-const Number = document.getElementById("number")
+const CardNumber = document.getElementById("number")
 
 const NumberError = document.querySelector(".error-number")
 const DateError = document.querySelector(".error-date")
@@ -34,7 +34,7 @@ const type = document.querySelector(".type")
 
 const Continue = document.getElementById("continue")
 
-Number.addEventListener("keyup",(e)=>{
+CardNumber.addEventListener("keyup",(e)=>{
 
 
      
@@ -52,10 +52,10 @@ Number.addEventListener("keyup",(e)=>{
 }
 )
 
-Number.addEventListener("click",(e)=>{
+CardNumber.addEventListener("click",(e)=>{
 
 
-    Number.value=""
+    CardNumber.value=""
 
 })
 
@@ -79,13 +79,13 @@ form.addEventListener('submit',(e)=>{
         Name.style.border="2px solid hsl(270, 3%, 87%)"
     }
 
-    const CardNumber = [...Number.value]    
+    const CardNumbers = [...CardNumber.value]    
 
     let Value =[]
 
     let space =[]
 
-    CardNumber.map((item,index)=>{
+    CardNumbers.map((item,index)=>{
 
     
 
@@ -108,13 +108,13 @@ form.addEventListener('submit',(e)=>{
 
     let index = Value.findIndex(item=>isNaN(item))
 
-    if(index>=0 || !Number.value){
+    if(index>=0 || !CardNumber.value){
 
         NumberError.style.display="block"
-        Number.style.border="2px solid hsl(0, 100%, 66%)"
+        CardNumber.style.border="2px solid hsl(0, 100%, 66%)"
     }else{
         NumberError.style.display="none"
-        Number.style.border="2px solid hsl(270, 3%, 87%)"
+        CardNumber.style.border="2px solid hsl(270, 3%, 87%)"
     }
     
     
@@ -158,7 +158,7 @@ form.addEventListener('submit',(e)=>{
 
     
 
-    if(index<0 && Number.value && month.value && year.value && cvv.value && Name.value){
+    if(index<0 && CardNumber.value && month.value && year.value && cvv.value && Name.value){
 
 
         type.style.display="none"
@@ -167,7 +167,7 @@ form.addEventListener('submit',(e)=>{
     }
 
 
-    displayNumber.innerText = !Number.value ? "0000 0000 0000 0000" : Number.value
+    displayNumber.innerText = !CardNumber.value ? "0000 0000 0000 0000" : Number.value
 
     displayName.innerText = !Name.value ? "JANE APPLESEED" : Name.value
 
@@ -189,7 +189,7 @@ Continue.addEventListener("click",()=>{
 
     Name.value=""
 
-    Number.value=""
+    CardNumber.value=""
 
     month.value=""
 
