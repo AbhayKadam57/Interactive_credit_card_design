@@ -88,11 +88,11 @@ form.addEventListener('submit',(e)=>{
         Name.style.border="2px solid hsl(270, 3%, 87%)"
     }
 
-    console.log(Number.value)
+    // console.log(Number.value)
 
-    console.log(typeof(Number.value))
+    // console.log(typeof(Number.value))
 
-    console.log([...Number.value])
+    // console.log([...Number.value])
 
     const CardNumber = [...Number.value]    
 
