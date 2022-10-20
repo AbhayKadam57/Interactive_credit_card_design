@@ -64,16 +64,7 @@ Number.addEventListener("click",(e)=>{
 
 form.addEventListener('submit',(e)=>{
 
-    displayNumber.innerText = !Number.value ? "0000 0000 0000 0000" : Number.value
-
-    displayName.innerText = !Name.value ? "JANE APPLESEED" : Name.value
-
-    displayMonth.innerText = !month.value ? "00" : month.value
-
-
-    displayYear.innerText = !year.value ? "00" : year.value
-
-    displayCvv.innerText = !cvv.value ? "000" : cvv.value
+    
 
     e.preventDefault()
 
@@ -119,45 +110,59 @@ form.addEventListener('submit',(e)=>{
 
     console.log(Value)
 
-   
 
-   
 
-    Value.map((item)=>{
 
-        if(isNaN(item)){
+    let index = Value.findIndex(item=>isNaN(item))
 
-            NumberError.style.display="block"
-            Number.style.border="2px solid hsl(0, 100%, 66%)"
-
-           
-            
-           
-           
-            
-        }else{
-            NumberError.style.display="none"
-            Number.style.border="2px solid hsl(270, 3%, 87%)"
-
-            if(Name.value && month.value && year.value && cvv.value){
-
-                type.style.display="none"
-        
-                complete.style.display="flex"
-            }
-           
-        }
-    })
-   
-
-    if(!Number.value){
+    if(index>=0 || !Number.value){
 
         NumberError.style.display="block"
         Number.style.border="2px solid hsl(0, 100%, 66%)"
+    }else{
+
+        NumberError.style.display="none"
+        Number.style.border="2px solid hsl(270, 3%, 87%)"
+
+    }
+    
+    if(!month.value){
+        
+        
+        if(!month.value){
+
+            month.style.border="2px solid hsl(0, 100%, 66%)"
+            DateError.style.display="block"
+        }else{
+
+            month.style.border="2px solid hsl(270, 3%, 87%)"
+            DateError.style.display="none"  
+        }
+
+       
+
+       
+        
+    }else{
+
+        month.style.border="2px solid hsl(270, 3%, 87%)"
+        year.style.border="2px solid hsl(270, 3%, 87%)"
+    }
+
+
+
+    if(!year.value){
+
+        DateError.style.display="block"
+        year.style.border="2px solid hsl(0, 100%, 66%)"
+    }else{
+        DateError.style.display="none"  
+        year.style.border="2px solid hsl(270, 3%, 87%)"
+       
     }
 
     if(!cvv.value){
-
+        
         CVVError.style.display="block"
         cvv.style.border="2px solid hsl(0, 100%, 66%)"
     }else{
@@ -168,48 +173,30 @@ form.addEventListener('submit',(e)=>{
         year.style.border="2px solid hsl(270, 3%, 87%)"
         cvv.style.border="2px solid hsl(270, 3%, 87%)"
 
+        type.style.display="none"
+
+        complete.style.display="flex"
+
     }
 
-    if(!month.value || !year.value){
+ 
 
 
-        if(!month.value){
+    displayNumber.innerText = !Number.value ? "0000 0000 0000 0000" : Number.value
 
-            month.style.border="2px solid hsl(0, 100%, 66%)"
-            DateError.style.display="block"
-        }else{
+    displayName.innerText = !Name.value ? "JANE APPLESEED" : Name.value
 
-            month.style.border="2px solid hsl(270, 3%, 87%)"  
-        }
+    displayMonth.innerText = !month.value ? "00" : month.value
 
-        if(!year.value){
 
-            DateError.style.display="block"
-            year.style.border="2px solid hsl(0, 100%, 66%)"
-        }else{
+    displayYear.innerText = !year.value ? "00" : year.value
 
-            year.style.border="2px solid hsl(270, 3%, 87%)"  
-        }
-
-        // DateError.style.display="block"
-       
-       
-        // YearError.style.display="block"
-        
-    }else{
-
-        month.style.border="2px solid hsl(270, 3%, 87%)"
-        year.style.border="2px solid hsl(270, 3%, 87%)"
-    }
-    
+    displayCvv.innerText = !cvv.value ? "000" : cvv.value
     
   
-
-    
-
-    
-    
    
+
+
 })
 
 
