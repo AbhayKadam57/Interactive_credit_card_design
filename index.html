@@ -23,7 +23,7 @@
       <div id="bg-right"></div>
     </div>
     <section class="form-cards">
-      <div role="cards" class="cards">
+      <div role="group" class="cards">
         <div class="card front-cards">
           <img src="./images/bg-card-front.png" alt="" />
           <div class="logo">
@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="form type">
-        <form role="form" id="form" action="/" method="GET">
+        <form role="listitem" id="form" action="/" method="GET">
           <div role="input" class="inputs">
             <label for="name">Cardholder name</label>
             <input
@@ -55,6 +55,7 @@
               id="name"
               name="name"
               placeholder="e.g. Jane Appleseed"
+              role="tab"
             />
           </div>
           <small class="error error-name" id="error-name"
@@ -68,12 +69,13 @@
               name="number"
               maxlength="19"
               placeholder="e.g. 1234 5678 9123 0000"
+              role="tab"
             />
           </div>
           <small class="error error-number">Wrong Format, Number only</small>
           <div id="inputs" class="input-date">
             <div id="exp-date">
-              <label role="exp-date">Exp. Date(MM/YY)</label>
+              <label role="dialog">Exp. Date(MM/YY)</label>
               <div role="date-box" class="date-box">
                 <input
                   id="month"
@@ -81,6 +83,7 @@
                   name="month"
                   placeholder="MM"
                   maxlength="2"
+                  role="tab"
                 />
                 <input
                   id="year"
@@ -88,6 +91,7 @@
                   name="year"
                   placeholder="YY"
                   maxlength="2"
+                  role="tab"
                 />
               </div>
               <small class="error error-date">Can't be blank</small>
@@ -95,20 +99,20 @@
             </div>
 
             <div class="cvv">
-              <label role="cvv" for="cvv-number">CvC</label>
+              <label role="navigation" for="cvv-number">CvC</label>
               <input
                 type="text"
                 id="cvv-number"
                 name="cvv"
                 placeholder="e.g. 123"
                 maxlength="3"
-                role="cvv-input"
+                role="tab"
               />
               <small class="error error-cvv">Can't be blank</small>
             </div>
           </div>
 
-          <button role="btn" class="button" type="submit">Confirm</button>
+          <button role="button" class="button" type="submit">Confirm</button>
         </form>
       </div>
       <div class="form complete">
