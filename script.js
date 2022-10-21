@@ -167,7 +167,7 @@ form.addEventListener('submit',(e)=>{
     }
 
 
-    displayNumber.innerText = !CardNumber.value ? "0000 0000 0000 0000" : Number.value
+    displayNumber.innerText = !CardNumber.value ? "0000 0000 0000 0000" : CardNumber.value
 
     displayName.innerText = !Name.value ? "JANE APPLESEED" : Name.value
 
