@@ -52,7 +52,7 @@ CardNumber.addEventListener("keyup",(e)=>{
 }
 )
 
-CardNumber.addEventListener("click",(e)=>{
+CardNumber.addEventListener("click",()=>{
 
 
     CardNumber.value=""

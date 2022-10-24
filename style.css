@@ -390,9 +390,14 @@ input:focus{
    
   .form{
 
-    width: 120%;
+    width: 100%;
     display: flex;
    
+  }
+
+  #form{
+
+    width: 93%;
   }
 
   .complete{
