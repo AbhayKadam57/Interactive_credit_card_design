@@ -79,19 +79,23 @@
               <div role="date-box" class="date-box">
                 <input
                   id="month"
-                  type="text"
+                  type="number"
                   name="month"
                   placeholder="MM"
-                  maxlength="2"
                   role="tab"
+                  max="12"
+                  min="1"
                 />
                 <input
                   id="year"
-                  type="text"
+                  type="number"
                   name="year"
                   placeholder="YY"
                   maxlength="2"
                   role="tab"
+                  maxlength="2"
+                  min="18"
+                  max="30"
                 />
               </div>
               <small class="error error-date">Can't be blank</small>
@@ -101,18 +105,22 @@
             <div class="cvv">
               <label role="navigation" for="cvv-number">CvC</label>
               <input
-                type="text"
+                type="number"
                 id="cvv-number"
                 name="cvv"
                 placeholder="e.g. 123"
                 maxlength="3"
                 role="tab"
+                maxlength="3"
+                min="111"
+                max="999"
               />
               <small class="error error-cvv">Can't be blank</small>
+              <small class="error error-cvv-datatype">Can't be blank</small>
             </div>
           </div>
 
-          <button role="button" class="button" type="submit">Confirm</button>
+          <button role="button" class="button" type="submit">Submit</button>
         </form>
       </div>
       <div class="form complete">

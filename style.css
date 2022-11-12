@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
-*{
+* {
 
     margin: 0;
     padding: 0;
@@ -8,50 +8,50 @@
     font: inherit;
 }
 
-body{
+body {
 
     font-family: 'Space Grotesk', sans-serif;
-   
+
 
 }
 
-:root{
+:root {
 
     --primary-bg: hsl(0, 0%, 100%);
-    --input-border:hsl(270, 3%, 87%);
-    --input-text:hsl(279, 6%, 55%);
-    --button-color:hsl(278, 68%, 11%);
-    --input-error:hsl(0, 100%, 66%);
-    --primary-fz:18px;
-    --primary-fw:500;
+    --input-border: hsl(270, 3%, 87%);
+    --input-text: hsl(279, 6%, 55%);
+    --button-color: hsl(278, 68%, 11%);
+    --input-error: hsl(0, 100%, 66%);
+    --primary-fz: 18px;
+    --primary-fw: 500;
 }
 
-img{
+img {
 
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#wrapper{
+#wrapper {
 
     height: 100vh;
     display: flex;
     position: relative;
-   
+
 }
 
-#bg-left{
+#bg-left {
 
     flex: 2;
 }
 
-#bg-right{
+#bg-right {
 
     flex: 4;
 }
 
-.form-cards{
+.form-cards {
 
     width: 70%;
     /* background-color: red; */
@@ -65,109 +65,109 @@ img{
     justify-content: center;
 }
 
-.cards{
+.cards {
 
     display: flex;
     flex-direction: column;
     gap: 30px;
-    flex:1;
+    flex: 1;
 }
 
-.card{
+.card {
 
-    max-width: 80%; 
+    max-width: 80%;
     position: relative;
-   
-   
+
+
 }
 
-.back-card{
+.back-card {
 
     position: relative;
     left: 15%;
 }
 
-.form{
+.form {
 
-    flex:1;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.type{
+.type {
 
     display: flex;
 }
 
-form{
+form {
 
     display: flex;
     flex-direction: column;
     /* background-color: green; */
     width: 75%;
-  
+
 }
 
-.inputs{
+.inputs {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
     gap: 10px;
 }
 
-.date-box{
+.date-box {
 
     display: flex;
-    flex:1;
+    flex: 1;
 }
 
 
 
-#month{
+#month {
 
-    width:50%;
+    width: 50%;
     margin-right: 10px;
 }
 
-#year{
+#year {
 
     width: 50%;
 }
 
-.cvv{
+.cvv {
 
-   /* background-color: blue; */
+    /* background-color: blue; */
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
 }
 
-#cvv-number{
+#cvv-number {
 
     width: 100%;
 }
 
 
-.input-date{
+.input-date {
 
     display: flex;
     gap: 20px;
     margin-top: 20px;
 
-    
+
 }
 
-label{
+label {
 
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.button{
+.button {
 
     padding: 0.5em 0;
     display: flex;
@@ -181,13 +181,13 @@ label{
     cursor: pointer;
 }
 
-#exp-date{
+#exp-date {
 
     width: 50%;
     /* background-color: yellow; */
 }
 
-input{
+input {
 
     height: 2.8em;
     outline: none;
@@ -197,20 +197,20 @@ input{
     padding: 0 15px;
 }
 
-input::placeholder{
+input::placeholder {
 
     opacity: 0.4;
 
 }
 
-#exp-date{
+#exp-date {
 
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.logo{
+.logo {
 
     position: absolute;
     top: 0;
@@ -220,18 +220,18 @@ input::placeholder{
 
 }
 
-#card-number{
+#card-number {
 
     position: absolute;
     bottom: 25%;
     left: 20px;
     color: #fff;
-    font-size: clamp(0.1rem,1.8vw,1.8rem);
+    font-size: clamp(0.1rem, 1.8vw, 1.8rem);
     letter-spacing: 2px;
-   
+
 }
 
-#carholder-name{
+#carholder-name {
 
     display: flex;
     justify-content: space-between;
@@ -240,45 +240,45 @@ input::placeholder{
     left: 20px;
     width: 85%;
     color: #fff;
-    font-size: clamp(0.1rem,1vw,1rem);
+    font-size: clamp(0.1rem, 1vw, 1rem);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-#cvv-box{
+#cvv-box {
 
     position: absolute;
     right: 20px;
     top: 15%;
-    font-size: clamp(0.1rem,1.2vw,2em);
+    font-size: clamp(0.1rem, 1.2vw, 2em);
     color: #fff;
 }
 
 /* This is used to get a gradient border */
-input:focus{
+input:focus {
 
-    background: 
-    linear-gradient(#fff,#fff) padding-box,
-    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+    background:
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
     border-radius: 0.4em;
     border: 1px solid transparent;
     cursor: pointer;
 }
 
-.error{
+.error {
 
     font-size: 0.8em;
     color: var(--input-error);
     margin-top: 0.3em;
 }
 
-.error-name,.error-number,.error-date,.error-cvv{
+.error-name, .error-number, .error-date, .error-cvv {
 
     display: none;
 }
 
 
-.complete{
+.complete {
 
     display: flex;
     flex-direction: column;
@@ -287,137 +287,153 @@ input:focus{
     display: none;
 }
 
-.complete h1{
+.complete h1 {
     font-size: 1.7em;
     letter-spacing: 3px;
 }
 
-.complete p{
+.complete p {
 
     color: var(--input-text);
 }
 
-.complete button{
+.complete button {
 
-    width:70%;
+    width: 70%;
 }
 
-.check{
+.check {
 
     width: 4em;
     height: 4em;
-    
+
+}
+
+.numberError {
+
+    display: none;
+}
+
+.error-cvv-datatype {
+
+    display: none;
+}
+
+
+#month::-webkit-inner-spin-button, #month::-webkit-outer-spin-button, #year::-webkit-inner-spin-button, #year::-webkit-outer-spin-button, #cvv-number::-webkit-inner-spin-button, #year::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
 }
 
 @media (max-width: 950px) {
 
-    #wrapper{
+    #wrapper {
 
         display: flex;
         flex-direction: column;
     }
 
-    .complete{
+    .complete {
 
         display: "none";
     }
 
 
-    #bg-left{
+    #bg-left {
 
         height: 40%;
     }
 
-    .form-cards{
+    .form-cards {
 
         display: flex;
         flex-direction: column;
         padding: 1em;
     }
 
-    .cards{
+    .cards {
 
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .front-cards{
+    .front-cards {
 
         margin-top: -120px;
         position: relative;
         z-index: 2;
     }
 
-    #card-number{
+    #card-number {
 
-        font-size: clamp(1.6em,2vw,2em);
+        font-size: clamp(1.6em, 2vw, 2em);
     }
 
-    #cvv-box{
+    #cvv-box {
 
 
         font-size: 1.2em;
     }
 
-    #carholder-name{
+    #carholder-name {
 
         font-size: 0.9em;
     }
 }
 
-@media screen and (max-width:426px){
+@media screen and (max-width:426px) {
 
 
-    #bg-left{
+    #bg-left {
         height: 35%;
     }
 
-   
-    
-  .form-cards{
 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: -10% auto;
-    padding: 10px;
-  }
 
-  .front-cards{
+    .form-cards {
 
-    margin-top: -96px;
-  }
-   
-  .form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: -10% auto;
+        padding: 10px;
+    }
 
-    width: 100%;
-    display: flex;
-   
-  }
+    .front-cards {
 
-  #form{
+        margin-top: -96px;
+    }
 
-    width: 93%;
-  }
+    .form {
 
-  .complete{
+        width: 100%;
+        display: flex;
 
-    display: none;
-    margin-top: 3em;
-}
+    }
 
-  #card-number{
+    #form {
 
-    font-size: 1.1em;
-  }
+        width: 93%;
+    }
 
-  #carholder-name{
+    .complete {
 
-    font-size: 0.6em;
-  }
+        display: none;
+        margin-top: 3em;
+    }
 
-  #cvv-box p{
+    #card-number {
 
-    font-size: 0.8em;
-  }
+        font-size: 1.1em;
+    }
+
+    #carholder-name {
+
+        font-size: 0.6em;
+    }
+
+    #cvv-box p {
+
+        font-size: 0.8em;
+    }
 }
